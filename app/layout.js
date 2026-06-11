@@ -9,7 +9,22 @@ const montserrat = Montserrat({
 export const metadata = {
   title: 'VEKCIA Tech | Desarrollo de Software, IA y Soluciones Empresariales',
   description:
-    'Desarrollamos software a la medida, aplicaciones web, plataformas empresariales, inteligencia artificial, GPS, telemetría y soluciones tecnológicas para impulsar el crecimiento de tu negocio.'
+    'Desarrollamos software a la medida, aplicaciones web, plataformas empresariales, inteligencia artificial, automatización de procesos, integraciones y soluciones tecnológicas para empresas en crecimiento.',
+  keywords: [
+    'desarrollo de software',
+    'software a la medida',
+    'desarrollo web',
+    'nextjs',
+    'react',
+    'inteligencia artificial',
+    'automatizacion',
+    'erp',
+    'crm',
+    'aplicaciones empresariales',
+    'transformacion digital',
+    'consultoria tecnologica',
+    'vekcia tech'
+  ]
 }
 
 export default function RootLayout({ children }) {
