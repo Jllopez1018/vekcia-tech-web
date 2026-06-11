@@ -68,15 +68,35 @@ export default function Hero() {
 
                 <p>{slide.subtitle}</p>
 
-                {/* <div className="hero-actions">
-                  <a className="btn-primary">
-                    Solicitar Asesoría
-                  </a>
+                <a
+                  href="#servicios"
+                  className="
+                    inline-flex
+                    items-center
+                    px-6
+                    py-3
+                    mt-5
+                    rounded-full
+                    bg-slate-900
+                    text-white
+                    font-semibold
+                    hover:bg-slate-800
+                    transition
+                  "
+                >
+                  Conocer más
 
-                  <a className="btn-secondary">
-                    Ver Servicios
-                  </a>
-                </div> */}
+                  <span
+                    className="
+                      transition-transform
+                      duration-300
+                      group-hover:translate-x-2
+                    "
+                  >
+                    →
+                  </span>
+
+                </a>
               </div>
             </div>
           </SwiperSlide>
