@@ -7,8 +7,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: 'VEKCIA Technologies',
-  description: 'Landing Page Next.js'
+  title: 'VEKCIA Tech | Desarrollo de Software, IA y Soluciones Empresariales',
+  description:
+    'Desarrollamos software a la medida, aplicaciones web, plataformas empresariales, inteligencia artificial, GPS, telemetría y soluciones tecnológicas para impulsar el crecimiento de tu negocio.'
 }
 
 export default function RootLayout({ children }) {
