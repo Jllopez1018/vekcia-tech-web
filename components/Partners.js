@@ -1,100 +1,194 @@
-"use client";
-
-const logos = [
-  "/logos/partners/five.png",
-  "/logos/partners/agro-santa-rosa.png",
-  "/logos/partners/auto-fletes-santa-rosa.png",
-  "/logos/partners/emblema-seguros.png",
-];
-
 export default function Partners() {
+  const aseguradoras = [
+    {
+      name: "HDI Seguros",
+      image: "/images/aseguradoras/hdi.png",
+    },
+    {
+      name: "ANA Seguros",
+      image: "/images/aseguradoras/ana.png",
+    },
+    {
+      name: "Seguros Atlas",
+      image: "/images/aseguradoras/atlas.png",
+    },
+    {
+      name: "AXA Seguros",
+      image: "/images/aseguradoras/axa.png",
+    },
+    {
+      name: "Chubb",
+      image: "/images/aseguradoras/chubb.png",
+    },
+    {
+      name: "GNP Seguros",
+      image: "/images/aseguradoras/gnp.png",
+    },    
+    {
+      name: "MAPFRE",
+      image: "/images/aseguradoras/mapfre.png",
+    },
+    {
+      name: "MAPS Seguros",
+      image: "/images/aseguradoras/maps.png",
+    },
+    {
+      name: "Primero Seguros",
+      image: "/images/aseguradoras/primero.png",
+    },
+    {
+      name: "Quálitas",
+      image: "/images/aseguradoras/qualitas.png",
+    },
+  ];
+
   return (
     <section
-      className="
-        bg-white
-        py-12
-      "
+      id="partners"
+      className="bg-[var(--brand-background-secondary)] py-24 lg:py-32"
+      data-aos="fade-up"
     >
-      <div
-        className="
-          max-w-7xl
-          mx-auto
-          px-6
-        "
-      >
-        <div className="text-center mb-16">
-<span
-  className="
-    inline-flex
-    items-center
-    rounded-full
-    px-5
-    py-2.5
-    text-sm
-    font-semibold
-    tracking-[0.2em]
-    uppercase
-    bg-slate-100
-    border
-    border-slate-200
-    text-slate-700
-  "
->
-  Nuestro Ecosistema
-</span>
+      <div className="site-container">
 
-<h2
-  className="
-    mt-8
-    text-5xl
-    font-bold
-    text-slate-900
-  "
->
-  Empresas que impulsan la innovación junto a nosotros
-</h2>
+        {/* Encabezado */}
+        <div className="max-w-4xl mx-auto text-center">
 
-<p
-  className="
-    mt-8
-    text-xl
-    text-slate-600
-    max-w-4xl
-    mx-auto
-    leading-9
-  "
->
-  Estas organizaciones forman parte del ecosistema VEKCIA y reflejan nuestro compromiso con el desarrollo de soluciones tecnológicas que generan eficiencia, crecimiento y ventajas competitivas para cada negocio.
-</p>
+          <span
+            className="
+              inline-block
+              mb-6
+              text-sm
+              font-bold
+              uppercase
+              tracking-[0.3em]
+              text-[var(--brand-secondary)]
+            "
+          >
+            Compañías que representamos
+          </span>
+
+          <h2
+            className="
+              text-4xl
+              md:text-5xl
+              lg:text-6xl
+              font-black
+              tracking-tight
+              leading-[1.05]
+              text-[var(--brand-primary)]
+            "
+          >
+            El respaldo de grandes
+            <br />
+            compañías aseguradoras.
+          </h2>
+
+          <div
+            className="
+              w-20
+              h-1
+              mx-auto
+              mt-8
+              rounded-full
+              bg-[var(--brand-secondary)]
+            "
+          />
+
+          <p
+            className="
+              max-w-3xl
+              mx-auto
+              mt-8
+              text-lg
+              md:text-xl
+              leading-relaxed
+              text-[var(--brand-text-secondary)]
+            "
+          >
+            Trabajamos con compañías aseguradoras reconocidas para ofrecer
+            alternativas de protección que respondan a las necesidades de
+            cada persona, familia, empresa y transportista.
+          </p>
+
         </div>
 
-        {/* Slider */}
-        <div className="partners-slider mb-24">
-          <div className="partners-track">
-            {[...logos, ...logos, ...logos].map((logo, index) => (
-              <div
-                key={index}
-                className="partner-item"
-              >
-                <img
-                  src={logo}
-                  alt=""
-                />
-              </div>
-            ))}
-          </div>
-        </div>
 
-        {/* Footer */}
+        {/* Logos */}
         <div
           className="
-            border-t
-            border-slate-200
-            pt-20
+            grid
+            grid-cols-2
+            sm:grid-cols-3
+            lg:grid-cols-5
+            gap-5
+            max-w-6xl
+            mx-auto
+            mt-16
+          "
+        >
+
+          {aseguradoras.map((aseguradora) => (
+            <div
+              key={aseguradora.name}
+              className="
+                group
+                flex
+                items-center
+                justify-center
+                h-32
+                px-6
+                rounded-[var(--brand-radius-md)]
+                border
+                border-[var(--brand-border)]
+                bg-white
+                transition-all
+                duration-300
+                hover:-translate-y-1
+                hover:shadow-lg
+              "
+            >
+              <img
+                src={aseguradora.image}
+                alt={aseguradora.name}
+                className="
+                  max-w-full
+                  max-h-20
+                  w-auto
+                  h-auto
+                  object-contain
+                  transition-transform
+                  duration-300
+                  group-hover:scale-105
+                "
+              />
+            </div>
+          ))}
+
+        </div>
+
+
+        {/* Cierre */}
+        <div
+          className="
+            max-w-4xl
+            mx-auto
+            mt-14
             text-center
           "
         >
+          <p
+            className="
+              text-base
+              md:text-lg
+              font-semibold
+              text-[var(--brand-primary)]
+            "
+          >
+            Más opciones de protección para encontrar la solución adecuada
+            para cada necesidad.
+          </p>
         </div>
+
       </div>
     </section>
   );

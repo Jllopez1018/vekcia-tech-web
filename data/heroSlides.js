@@ -1,25 +1,29 @@
 const heroSlides = [
+
   {
-    title: "Desarrollo de Software a la Medida",
+    title: "Servicio que protege, Atención que acompaña",
     subtitle:
-      "Diseñamos y desarrollamos soluciones de software adaptadas a los procesos de tu empresa, optimizando operaciones, aumentando la productividad y acelerando el crecimiento de tu negocio.",
+      "En Emblema Seguro, nuestro compromiso es brindarte atención cercana, soluciones efectivas y el respaldo de las mejores aseguradoras.",
     image:
-      "/images/hero/software.jpg"
+      "/images/hero/emblema-hero-01.jpg"
   },
+
   {
-    title: "Sitios Web y Presencia Digital",
+    title: "Soluciones de protección a la medida",
     subtitle:
-      "Creamos sitios web profesionales, tiendas en línea, correos empresariales y soluciones de hosting que fortalecen tu presencia digital, generan confianza y convierten visitantes en nuevos clientes.",
+      "Brindar protección, confianza y acompañamiento a cada prospecto mediante soluciones de aseguramiento diseñadas a la medida.",
     image:
-      "/images/hero/sitios.jpg"
+      "/images/hero/emblema-hero-02.jpg"
   },
+
   {
-    title: "Software Empresarial Listo para Implementar",
+    title: "Cada prospecto es único",
     subtitle:
-      "Impulsa tu operación con sistemas probados para CRM, control de inventarios, seguimiento de unidades, administración de clientes y gestión empresarial.",
+      "Por eso construimos soluciones de protección a la medida de sus necesidades.",
     image:
-      "/images/hero/desarollados.jpg"
+      "/images/hero/emblema-hero-03.jpg"
   }
+
 ];
 
 export default heroSlides;

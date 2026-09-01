@@ -1,148 +1,348 @@
-import Link from "next/link";
-
 export default function Footer() {
   return (
-    <footer className="bg-slate-950 text-white py-16">
-      <div className="max-w-7xl mx-auto px-6">
+    <footer
+      className="
+        bg-[var(--brand-primary)]
+        text-white
+      "
+    >
 
-        {/* Logo + Descripción */}
-        <div className="text-center mb-16">
+      <div className="site-container">
 
-          <img
-            src="/logos/logot.png"
-            alt="VEKCIA"
-            className="h-30 mx-auto mb-1"
-          />
+        <div
+          className="
+            grid
+            grid-cols-1
+            md:grid-cols-2
+            lg:grid-cols-4
+            gap-12
+            py-16
+            lg:py-20
+          "
+        >
 
-          <p
+          {/* =========================================
+              MARCA
+          ========================================= */}
+
+          <div className="lg:col-span-1">
+
+            <img
+              src="/images/logos/logo-emblema.png"
+              alt="Emblema Seguro"
+              className="
+                h-12
+                w-auto
+                brightness-0
+                invert
+              "
+            />
+
+            <p
+              className="
+                mt-6
+                max-w-sm
+                text-sm
+                leading-7
+                text-white/70
+              "
+            >
+              Protegemos lo que más te importa con soluciones de seguros
+              diseñadas a tu medida, acompañamiento cercano y respaldo
+              durante cada paso.
+            </p>
+
+          </div>
+
+
+          {/* =========================================
+              ENLACES
+          ========================================= */}
+
+          <div>
+
+            <h3 className="font-bold text-lg">
+              Enlaces rápidos
+            </h3>
+
+            <ul className="mt-5 space-y-3">
+
+              <li>
+                <a
+                  href="#nosotros"
+                  className="text-sm text-white/70 transition hover:text-white"
+                >
+                  Nosotros
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#mision"
+                  className="text-sm text-white/70 transition hover:text-white"
+                >
+                  Misión
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#vision"
+                  className="text-sm text-white/70 transition hover:text-white"
+                >
+                  Visión
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#seguros"
+                  className="text-sm text-white/70 transition hover:text-white"
+                >
+                  Seguros
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#siniestros"
+                  className="text-sm text-white/70 transition hover:text-white"
+                >
+                  Siniestros
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#cobertura"
+                  className="text-sm text-white/70 transition hover:text-white"
+                >
+                  Cobertura
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+
+
+          {/* =========================================
+              SEGUROS
+          ========================================= */}
+
+          <div>
+
+            <h3 className="font-bold text-lg">
+              Seguros
+            </h3>
+
+            <ul className="mt-5 space-y-3">
+
+              <li>
+                <a
+                  href="#seguro-personas"
+                  className="text-sm text-white/70 transition hover:text-white"
+                >
+                  Seguro de Personas
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#seguro-familias"
+                  className="text-sm text-white/70 transition hover:text-white"
+                >
+                  GMM y Colectivo
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#seguro-flotillas"
+                  className="text-sm text-white/70 transition hover:text-white"
+                >
+                  Flotillas y Equipo Pesado
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#seguro-empresarial"
+                  className="text-sm text-white/70 transition hover:text-white"
+                >
+                  Seguro Empresarial
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#seguro-responsabilidad"
+                  className="text-sm text-white/70 transition hover:text-white"
+                >
+                  Responsabilidad Civil
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#seguro-transporte"
+                  className="text-sm text-white/70 transition hover:text-white"
+                >
+                  Transporte de Mercancías
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+
+
+          {/* =========================================
+              CONTACTO
+          ========================================= */}
+
+          <div>
+
+            <h3 className="font-bold text-lg">
+              Contacto
+            </h3>
+
+            <div className="mt-5 space-y-4">
+
+              <p className="text-sm text-white/70">
+                [Teléfono de Emblema]
+              </p>
+
+              <p className="text-sm text-white/70">
+                [Correo de Emblema]
+              </p>
+
+              <p className="text-sm text-white/70">
+                [Dirección de Emblema]
+              </p>
+
+            </div>
+
+
+            {/* CTA */}
+
+            <a
+              href="#contacto"
+              className="
+                inline-flex
+                items-center
+                justify-center
+                mt-7
+                px-5
+                py-3
+                rounded-[var(--brand-radius-sm)]
+                border
+                border-white/30
+                text-sm
+                font-bold
+                transition-all
+                duration-300
+                hover:bg-white
+                hover:text-[var(--brand-primary)]
+              "
+            >
+              Cotiza ahora
+            </a>
+
+          </div>
+
+        </div>
+
+
+        {/* =========================================
+            BARRA INFERIOR
+        ========================================= */}
+
+        <div
+          className="
+            border-t
+            border-white/15
+            py-6
+            flex
+            flex-col
+            md:flex-row
+            items-center
+            justify-between
+            gap-4
+          "
+        >
+
+          <p className="text-sm text-white/60 text-center md:text-left">
+            © {new Date().getFullYear()} Emblema Seguro. Todos los derechos
+            reservados.
+          </p>
+
+          <div
             className="
-              text-slate-400
-              leading-8
-              max-w-3xl
-              mx-auto
+              flex
+              flex-wrap
+              items-center
+              justify-center
+              gap-4
+              md:gap-6
             "
           >
-            Soluciones tecnológicas para empresas mediante desarrollo de
-            software, plataformas empresariales, sitios web y transformación
-            digital.
-          </p>
 
-        </div>
+            <a
+              href="#"
+              className="
+                text-sm
+                text-white/60
+                transition
+                hover:text-white
+              "
+            >
+              Aviso de privacidad
+            </a>
 
-        {/* Links */}
-        <div className="grid md:grid-cols-3 gap-12">
+            <span className="text-white/20">
+              |
+            </span>
 
-          {/* Sobre VEKCIA */}
-          <div>
-            <h3 className="text-xl font-bold mb-6">
-              VEKCIA Technologies
-            </h3>
+            <a
+              href="#"
+              className="
+                text-sm
+                text-white/60
+                transition
+                hover:text-white
+              "
+            >
+              Términos y condiciones
+            </a>
 
-            <p className="text-slate-400 leading-8">
-              Impulsamos empresas mediante tecnología, innovación y
-              desarrollo de software, creando soluciones digitales
-              diseñadas para optimizar procesos y acelerar el crecimiento.
-            </p>
+            <span className="text-white/20">
+              |
+            </span>
+
+            <span className="text-sm text-white/60">
+              Desarrollado por{" "}
+              <a
+                href="https://vekcia.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  font-bold
+                  text-white
+                  transition
+                  hover:text-[var(--brand-secondary)]
+                "
+              >
+                VEKCIA.com
+              </a>
+            </span>
+
           </div>
 
-          {/* Servicios */}
-          <div>
-            <h3 className="text-xl font-bold mb-6">
-              Servicios
-            </h3>
-
-            <ul className="space-y-4 text-slate-400">
-
-              <li>
-                <Link
-                  href="#servicios"
-                  className="hover:text-white transition-colors"
-                >
-                  Desarrollo de Software
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="#servicios"
-                  className="hover:text-white transition-colors"
-                >
-                  Sitios Web y Presencia Digital
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="#servicios"
-                  className="hover:text-white transition-colors"
-                >
-                  Software Empresarial
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="#servicios"
-                  className="hover:text-white transition-colors"
-                >
-                  Consultoría y Transformación Digital
-                </Link>
-              </li>
-
-            </ul>
-          </div>
-
-          {/* Empresas del Grupo */}
-          <div>
-            <h3 className="text-xl font-bold mb-6">
-              Empresas del Grupo
-            </h3>
-
-            <ul className="space-y-4 text-slate-400">
-
-              <li>
-                <Link
-                  href="https://tracking.vekcia.com"
-                  target="_blank"
-                  className="hover:text-white transition-colors"
-                >
-                  VEKCIA GPS
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="https://seguros.vekcia.com"
-                  target="_blank"
-                  className="hover:text-white transition-colors"
-                >
-                  VEKCIA Seguros
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="https://vekcia.com"
-                  target="_blank"
-                  className="hover:text-white transition-colors"
-                >
-                  VEKCIA Group
-                </Link>
-              </li>
-
-            </ul>
-          </div>
-
-        </div>
-
-        {/* Copyright */}
-        <div className="border-t border-slate-800 mt-12 pt-8">
-          <p className="text-slate-500 text-sm text-center">
-            © 2026 VEKCIA Technologies. Todos los derechos reservados.
-          </p>
         </div>
 
       </div>
+
     </footer>
   );
 }

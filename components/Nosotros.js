@@ -2,78 +2,280 @@ export default function Nosotros() {
   return (
     <section
       id="nosotros"
-      className="bg-white pt-45 pb-45"
+      className="bg-white py-24 lg:py-32"
       data-aos="fade-up"
     >
-      <div className="vekcia-container">
+      <div className="site-container">
 
-        <div
-          className="
-            flex
-            flex-col
-            items-center
-            text-center
-          "
-        >
+        {/* Encabezado */}
+        <div className="max-w-4xl mx-auto text-center">
 
           <span
             className="
               inline-block
+              mb-6
               text-sm
-              font-semibold
-              tracking-[0.35em]
+              font-bold
               uppercase
-              text-[var(--vekcia-bg)]
-              mb-8
+              tracking-[0.3em]
+              text-[var(--brand-secondary)]
             "
           >
-            Nosotros
+            ¿Quiénes somos?
           </span>
 
           <h2
             className="
-              max-w-6xl
-              mx-auto
-              text-5xl
-              lg:text-7xl
+              text-4xl
+              md:text-5xl
+              lg:text-6xl
               font-black
               tracking-tight
-              leading-[1]
-              text-[#081221]
+              leading-[1.05]
+              text-[var(--brand-primary)]
             "
           >
-            Transformamos ideas en soluciones tecnológicas.
+            18 años protegiendo
+            <br />
+            lo que más importa.
           </h2>
 
           <div
             className="
-              w-24
+              w-20
               h-1
-              bg-[var(--vekcia-bg)]
               mx-auto
               mt-8
               rounded-full
+              bg-[var(--brand-secondary)]
             "
           />
 
+        </div>
+
+
+        {/* Contenido principal */}
+        <div
+          className="
+            max-w-5xl
+            mx-auto
+            mt-12
+            text-center
+          "
+        >
+
           <p
             className="
-              max-w-5xl
-              mx-auto
-              mt-10
               text-xl
-              leading-9
-              text-slate-600
+              md:text-2xl
+              leading-relaxed
+              text-[var(--brand-text-secondary)]
             "
           >
-            En VEKCIA Technologies ayudamos a empresas a impulsar su
-            crecimiento mediante el desarrollo de software, sitios web,
-            automatización de procesos y soluciones digitales diseñadas
-            para optimizar operaciones y mejorar la toma de decisiones.
-            Combinamos experiencia tecnológica, innovación y enfoque
-            empresarial para crear herramientas que generan valor real y
-            acompañan la evolución de cada organización.
+            En <strong className="text-[var(--brand-primary)]">
+              Emblema Seguro
+            </strong>{" "}
+            contamos con 18 años de experiencia protegiendo el patrimonio
+            de personas, empresas y transportistas.
           </p>
+
+          <p
+            className="
+              mt-6
+              text-lg
+              md:text-xl
+              leading-relaxed
+              text-[var(--brand-text-secondary)]
+            "
+          >
+            Brindamos soluciones de protección acompañadas de atención,
+            seguimiento y respaldo, porque entendemos que cada prospecto
+            es único.
+          </p>
+
+        </div>
+
+
+        {/* Pilares */}
+        <div
+          className="
+            grid
+            grid-cols-1
+            sm:grid-cols-2
+            lg:grid-cols-4
+            gap-5
+            mt-16
+            max-w-6xl
+            mx-auto
+          "
+        >
+
+          <div className="group rounded-[var(--brand-radius-md)] border border-[var(--brand-border)] bg-[var(--brand-background-secondary)] p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+            <div
+              className="
+                flex
+                items-center
+                justify-center
+                w-12
+                h-12
+                rounded-xl
+                bg-[var(--brand-accent)]
+                text-[var(--brand-secondary)]
+                text-xl
+                font-bold
+                mb-6
+              "
+            >
+              01
+            </div>
+
+            <h3
+              className="
+                text-2xl
+                font-bold
+                text-[var(--brand-primary)]
+              "
+            >
+              Servicio
+            </h3>
+
+            <p
+              className="
+                mt-3
+                leading-7
+                text-[var(--brand-text-secondary)]
+              "
+            >
+              Atención cercana y profesional para acompañarte
+              en cada momento.
+            </p>
+          </div>
+
+
+          <div className="group rounded-[var(--brand-radius-md)] border border-[var(--brand-border)] bg-[var(--brand-background-secondary)] p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+            <div
+              className="
+                flex
+                items-center
+                justify-center
+                w-12
+                h-12
+                rounded-xl
+                bg-[var(--brand-accent)]
+                text-[var(--brand-secondary)]
+                text-xl
+                font-bold
+                mb-6
+              "
+            >
+              02
+            </div>
+
+            <h3
+              className="
+                text-2xl
+                font-bold
+                text-[var(--brand-primary)]
+              "
+            >
+              Seguimiento
+            </h3>
+
+            <p
+              className="
+                mt-3
+                leading-7
+                text-[var(--brand-text-secondary)]
+              "
+            >
+              Estamos presentes para dar continuidad a tus
+              necesidades de protección.
+            </p>
+          </div>
+
+
+          <div className="group rounded-[var(--brand-radius-md)] border border-[var(--brand-border)] bg-[var(--brand-background-secondary)] p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+            <div
+              className="
+                flex
+                items-center
+                justify-center
+                w-12
+                h-12
+                rounded-xl
+                bg-[var(--brand-accent)]
+                text-[var(--brand-secondary)]
+                text-xl
+                font-bold
+                mb-6
+              "
+            >
+              03
+            </div>
+
+            <h3
+              className="
+                text-2xl
+                font-bold
+                text-[var(--brand-primary)]
+              "
+            >
+              Respaldo
+            </h3>
+
+            <p
+              className="
+                mt-3
+                leading-7
+                text-[var(--brand-text-secondary)]
+              "
+            >
+              Soluciones respaldadas por experiencia y por
+              compañías aseguradoras.
+            </p>
+          </div>
+
+
+          <div className="group rounded-[var(--brand-radius-md)] border border-[var(--brand-border)] bg-[var(--brand-background-secondary)] p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+            <div
+              className="
+                flex
+                items-center
+                justify-center
+                w-12
+                h-12
+                rounded-xl
+                bg-[var(--brand-accent)]
+                text-[var(--brand-secondary)]
+                text-xl
+                font-bold
+                mb-6
+              "
+            >
+              04
+            </div>
+
+            <h3
+              className="
+                text-2xl
+                font-bold
+                text-[var(--brand-primary)]
+              "
+            >
+              Experiencia
+            </h3>
+
+            <p
+              className="
+                mt-3
+                leading-7
+                text-[var(--brand-text-secondary)]
+              "
+            >
+              18 años de experiencia nos permiten entender
+              diferentes necesidades de protección.
+            </p>
+          </div>
 
         </div>
 

@@ -6,81 +6,156 @@ import { Menu, X } from "lucide-react";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
-  return (
-    <nav className="bg-[var(--vekcia-bg)] sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4">
+  const closeMenu = () => {
+    setOpen(false);
+  };
 
-        <div className="flex items-center justify-between h-16">
+  return (
+    <nav className="sticky top-0 z-50 bg-white border-b border-[var(--brand-border)] shadow-sm">
+
+      <div className="site-container">
+
+        <div className="flex items-center justify-between h-20">
 
           {/* Logo */}
-          <div className="flex items-center gap-3">
-
+          <a
+            href="#inicio"
+            onClick={closeMenu}
+            className="flex items-center"
+          >
             <img
-              src="/logos/logo-texto.png"
-              alt="VEKCIA"
-              className="h-10 w-auto"
+              src="/images/logos/logo-emblema.png"
+              alt="Emblema Seguro"
+              className="h-12 w-auto"
             />
+          </a>
 
-            <span
-              className="
-                hidden
-                sm:block
-                text-lg
-                font-bold
-                uppercase
-                tracking-[0.25em]
-                text-slate-300
-              "
-            >
-              Technologies
-            </span>
 
-          </div>
+          {/* Desktop Menu */}
+          <ul className="hidden md:flex items-center gap-6">
 
-          {/* Desktop */}
-          <ul className="hidden md:flex items-center gap-10 text-white font-semibold">
             <li>
-              <a href="#nosotros" className="hover:opacity-80">
+              <a
+                href="#nosotros"
+                className="text-[var(--brand-text)] font-semibold transition-colors hover:text-[var(--brand-secondary)]"
+              >
                 Nosotros
               </a>
             </li>
 
             <li>
-              <a href="#metas" className="hover:opacity-80">
-                Propuesta
+              <a
+                href="#mision"
+                className="text-[var(--brand-text)] font-semibold transition-colors hover:text-[var(--brand-secondary)]"
+              >
+                Misión
               </a>
             </li>
 
             <li>
-              <a href="#servicios" className="hover:opacity-80">
-                Servicios
+              <a
+                href="#vision"
+                className="text-[var(--brand-text)] font-semibold transition-colors hover:text-[var(--brand-secondary)]"
+              >
+                Visión
               </a>
             </li>
+
+            <li>
+              <a
+                href="#seguros"
+                className="text-[var(--brand-text)] font-semibold transition-colors hover:text-[var(--brand-secondary)]"
+              >
+                Seguros
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#siniestros"
+                className="text-[var(--brand-text)] font-semibold transition-colors hover:text-[var(--brand-secondary)]"
+              >
+                Siniestros
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#cobertura"
+                className="text-[var(--brand-text)] font-semibold transition-colors hover:text-[var(--brand-secondary)]"
+              >
+                Cobertura
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#contacto"
+                className="text-[var(--brand-text)] font-semibold transition-colors hover:text-[var(--brand-secondary)]"
+              >
+                Contacto
+              </a>
+            </li>
+
+            {/* CTA */}
+            <li>
+              <a
+                href="#contacto"
+                className="
+                  inline-flex
+                  items-center
+                  justify-center
+                  px-5
+                  py-2.5
+                  rounded-lg
+                  bg-[var(--brand-secondary)]
+                  text-white
+                  font-bold
+                  transition-all
+                  hover:bg-[var(--brand-primary)]
+                  hover:-translate-y-0.5
+                "
+              >
+                Cotiza ahora
+              </a>
+            </li>
+
           </ul>
+
 
           {/* Mobile Button */}
           <button
+            type="button"
             onClick={() => setOpen(!open)}
-            className="md:hidden text-white"
+            className="
+              md:hidden
+              flex
+              items-center
+              justify-center
+              text-[var(--brand-primary)]
+            "
+            aria-label={open ? "Cerrar menú" : "Abrir menú"}
+            aria-expanded={open}
           >
-            {open ? <X size={28} /> : <Menu size={28} />}
+            {open ? <X size={30} /> : <Menu size={30} />}
           </button>
 
         </div>
 
       </div>
 
+
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden bg-[var(--vekcia-bg)] border-t border-white/10">
+        <div className="md:hidden bg-white border-t border-[var(--brand-border)] shadow-lg">
 
-          <ul className="flex flex-col py-4">
+          <ul className="flex flex-col py-3">
 
             <li>
               <a
                 href="#nosotros"
-                onClick={() => setOpen(false)}
-                className="block px-6 py-3 text-white"
+                onClick={closeMenu}
+                className="block px-6 py-3 text-[var(--brand-text)] font-semibold hover:bg-[var(--brand-background-secondary)]"
               >
                 Nosotros
               </a>
@@ -88,21 +163,83 @@ export default function Navbar() {
 
             <li>
               <a
-                href="#metas"
-                onClick={() => setOpen(false)}
-                className="block px-6 py-3 text-white"
+                href="#mision"
+                onClick={closeMenu}
+                className="block px-6 py-3 text-[var(--brand-text)] font-semibold hover:bg-[var(--brand-background-secondary)]"
               >
-                Metas
+                Misión
               </a>
             </li>
 
             <li>
               <a
-                href="#servicios"
-                onClick={() => setOpen(false)}
-                className="block px-6 py-3 text-white"
+                href="#vision"
+                onClick={closeMenu}
+                className="block px-6 py-3 text-[var(--brand-text)] font-semibold hover:bg-[var(--brand-background-secondary)]"
               >
-                Servicios
+                Visión
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#seguros"
+                onClick={closeMenu}
+                className="block px-6 py-3 text-[var(--brand-text)] font-semibold hover:bg-[var(--brand-background-secondary)]"
+              >
+                Seguros
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#siniestros"
+                onClick={closeMenu}
+                className="block px-6 py-3 text-[var(--brand-text)] font-semibold hover:bg-[var(--brand-background-secondary)]"
+              >
+                Siniestros
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#cobertura"
+                onClick={closeMenu}
+                className="block px-6 py-3 text-[var(--brand-text)] font-semibold hover:bg-[var(--brand-background-secondary)]"
+              >
+                Cobertura
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#contacto"
+                onClick={closeMenu}
+                className="block px-6 py-3 text-[var(--brand-text)] font-semibold hover:bg-[var(--brand-background-secondary)]"
+              >
+                Contacto
+              </a>
+            </li>
+
+            {/* CTA */}
+            <li className="px-6 pt-3">
+              <a
+                href="#contacto"
+                onClick={closeMenu}
+                className="
+                  flex
+                  items-center
+                  justify-center
+                  w-full
+                  px-5
+                  py-3
+                  rounded-lg
+                  bg-[var(--brand-secondary)]
+                  text-white
+                  font-bold
+                "
+              >
+                Cotiza ahora
               </a>
             </li>
 
@@ -110,6 +247,7 @@ export default function Navbar() {
 
         </div>
       )}
+
     </nav>
   );
 }
